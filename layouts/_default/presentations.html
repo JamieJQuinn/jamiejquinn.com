@@ -1,0 +1,52 @@
+{{ define "main" }}
+<content>
+  <!-- {{ if .Data.Singular }} -->
+  <!-- <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3> -->
+  <!-- <small> -->
+  <!--   <a href="{{ "blog" | relURL }}">Remove filter</a> -->
+  <!-- </small> -->
+  <!-- {{ end }} -->
+  <ul class="blog-posts">
+    {{ range .Pages }}
+    <li>
+      <span>
+        <i>
+          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+            {{ .Date.Format (default "Jan 2006" .Site.Params.dateFormat) }}
+          </time>
+        </i>
+      </span>
+      <b>
+      {{ if .Param "plink" }}
+      <a href="{{ .Param "plink" }}">{{ .Title }}</a>
+      {{else}}
+      {{ .Title }}
+      {{end}}
+      </b>
+    </li>
+    <li>
+      <span>
+      </span>
+      <i>
+          {{ .Param "where" }}
+      </i>
+    </li>
+      {{ if .Param "desc" }}
+    <li>
+      <span>
+        <i>
+          <!-- {{ .Param "where" }} -->
+        </i>
+      </span>
+          {{ .Param "desc" }}
+    </li>
+    {{end}}
+    <br>
+    {{ else }}
+    <li>
+      No posts yet
+    </li>
+    {{ end }}
+  </ul>
+</content>
+{{ end }}

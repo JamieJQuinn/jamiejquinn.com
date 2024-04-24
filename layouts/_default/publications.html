@@ -1,0 +1,35 @@
+{{ define "main" }}
+<content>
+  <ul class="blog-posts">
+    {{ range .Pages }}
+    <li>
+      <span>
+        <i>
+          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+            {{ .Date.Format (default "Jan 2006" .Site.Params.dateFormat) }}
+          </time>
+        </i>
+      </span>
+      <b><a href="{{ .Param "doi" }}">{{ .Title }}</a></b>
+    </li>
+    <li>
+      <span>
+      </span>
+      <small>
+      <i>{{ .Param "journal" }}</i>
+      </small>
+    </li>
+    <li>
+      <span>
+      </span>
+      {{ .Param "authors" }}
+    </li>
+    <br>
+    {{ else }}
+    <li>
+      No posts yet
+    </li>
+    {{ end }}
+  </ul>
+</content>
+{{ end }}

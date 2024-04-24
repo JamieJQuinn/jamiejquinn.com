@@ -1,0 +1,8 @@
+# TODO
+
+- [ ] CV
+- [ ] Tunes
+- [ ] fiction
+- [x] where images go
+- [x] Where slides go
+- [x] Finish about page

@@ -1,0 +1,11 @@
+<a href="{{ "" | relURL }}" class="title">
+{{ $title := (.Title | title ) }}
+{{ $siteTitle := (.Site.Title) }}
+
+{{ if eq $siteTitle $title }}
+  <h2>{{ .Site.Title }}</h2>
+{{ else }}
+  <h2>{{ .Site.Title }} / {{ .Page.Title }}</h2>
+{{ end }}
+</a>
+<nav>{{- partial "nav.html" . -}}</nav>

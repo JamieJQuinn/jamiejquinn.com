@@ -1,0 +1,51 @@
+<b>{{ .Title }}</b>
+
+<div style="float:right">
+  {{ if .Param "github" }}
+  <a href="{{ .Param "github" }}">Github</a>
+  {{end}}
+  {{ if .Param "github" }}
+  {{ if .Param "blog_post" }}
+  / 
+  {{ else if .Param "live_demo" }}
+  / 
+  {{end}}
+  {{end}}
+  {{ if .Param "blog_post" }}
+  <a href="{{ .Site.Params.blogPrefix }}/{{ .Param "blog_post" }}">Blog Post</a>
+  {{end}}
+  {{ if .Param "live_demo" }}
+  {{ if .Param "blog_post" }}
+  / 
+  {{end}}
+  {{end}}
+  {{ if .Param "live_demo" }}
+  <a href="{{ .Param "live_demo" }}">Live Demo</a>
+  {{end}}
+</div>
+
+<hr>
+
+<div style="display: flex;">
+  <div style="width:80%">
+    {{ .Param "desc" }}
+
+    {{ if .Param "project_tags" }}
+    <small>
+      <div>
+        {{ range (.GetTerms "project_tags") }}
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        {{ end }}
+      </div>
+    </small>
+    {{ end }}
+  </div>
+
+  {{ if .Param "cover_image" }}
+    <div style="width:20%">
+      <img src="{{ .Param "cover_image" }}">
+    </div>
+  {{end}}
+</div>
+
+<br>

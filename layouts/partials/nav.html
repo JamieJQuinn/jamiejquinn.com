@@ -1,0 +1,6 @@
+<a href="{{ "" | relURL }}">Home</a>
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+<a href="http://art.jamiejquinn.com">Art</a>
+<!-- <a href="/cv.pdf">CV</a> -->
