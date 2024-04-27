@@ -61,7 +61,7 @@ enableRobotsTXT = true
   # You can turn it off, but we would really appreciate if you don’t :-).
   hideMadeWithLine = true
 
-  blogPrefix = "http://blog.jamiejquinn.com/"
+  blogPrefix = "http://jamiejquinn.com"
 
   # By default, this theme displays dates with a format like "02 Jan, 2006", but
   # you can customize it by setting the `dateFormat` param in your site's config
