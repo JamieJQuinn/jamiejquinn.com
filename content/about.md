@@ -1,6 +1,7 @@
 ---
 title: About
 menu: main
+draft: true
 ---
 
 I've always loved computer systems. Building PCs, networking them together and setting up servers and chat bots for friends was a key part of being a teenager for me. Of course I was interested in hacking as well; which wee nerd isn't. Luckily I stopped being interested after gaining some useful skills but before getting into any (serious) trouble. I eventually got into programming through playing with Arduino boards, a great introduction to both basic electronics and low-level embedded programming. I never took electronics very far, going on instead to learn Python and C++, mainly to start making little games. During my high school years I was convinced I would be a game developer; I was good at physics, maths and programming so the more technical areas of games physics and rendering appealed.
