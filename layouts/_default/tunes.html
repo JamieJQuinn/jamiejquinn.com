@@ -1,28 +1,30 @@
 {{ define "main" }}
 <content>
-  {{ if .Data.Singular }}
-  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
-  <small>
-    <a href="{{ "blog" | relURL }}">Remove filter</a>
-  </small>
-  {{ end }}
+  <!-- {{ if .Data.Singular }} -->
+  <!-- <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3> -->
+  <!-- <small> -->
+  <!--   <a href="{{ "blog" | relURL }}">Remove filter</a> -->
+  <!-- </small> -->
+  <!-- {{ end }} -->
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
-      <span>
-        <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-            {{ .Date.Format (default "2006" .Site.Params.dateFormat) }}
-          </time>
-        </i>
-      </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <div id="{{ .LinkTitle }}"></div>
+<script>
+var visualOptions = { responsive: 'resize' };
+window.ABCJS.renderAbc("{{ .LinkTitle }}", '{{ .RawContent }}', visualOptions);
+</script>
     </li>
+    <!-- <li> -->
+    <!--   <code>{{ .Param "abc" }}</code> -->
+    <!-- </li> -->
+    <br>
     {{ else }}
     <li>
-      No posts yet
+      No tunes yet
     </li>
     {{ end }}
   </ul>
 </content>
+
 {{ end }}
