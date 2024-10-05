@@ -1,6 +1,7 @@
 ---
 title: My issues with Zig for gamedev and Numerical Computing
 date: 2024-06-18
+draft: true
 tags:
 - zig
 - gamedev
