@@ -12,6 +12,35 @@ tags:
 
 This guide is an exploration of tools I use and why, and their associated configs. 
 
+## Development Environment
+
+- Neovim
+    - Obsidian.nvim
+- git & github
+- Kitty
+- Tmux
+- i3
+
+## Languages
+
+- C++
+- Fortran
+- Zig
+- Python
+
+## Hardware
+
+- Zephyrus G14 (2022)
+- Thinkpad x260
+- Unraid NAS
+- Pi4 (Backups)
+
+## Services
+
+- DuckDNS
+- Nextcloud
+- Plex
+- Tailscale
 
 ## Filesystem & Encryption 
 
@@ -22,7 +51,6 @@ This guide is an exploration of tools I use and why, and their associated config
 - borgmatic
     - Laptop backs up to both local Unraid and remote 4TB Pi4
     - Unraid backs up to Pi4
-    - Manual Rclone
 
 
 
