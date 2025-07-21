@@ -1,7 +1,6 @@
 ---
 title: Bah-Bah Limpy
 date: 2015-01-01
-draft: true
 ---
 
 X: 1
